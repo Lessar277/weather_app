@@ -10,26 +10,24 @@
 	</head>
 	<body>
 		<!-- WEATHER ICON -->
-		<div class="weather-icon">
-			<div class="icon sun-shower">
-			  <div class="cloud"></div>
-			  <div class="sun">
-			    <div class="rays"></div>
-			  </div>
-			  <div class="rain"></div>
-			</div>
-		</div>
+		<div class="weather-icon"></div>
 		<!-- WEATHER TEXT -->
 		<div class="weather-text">
-			<span class="city">Bucharest</span>
-			<span class="temp">34&#8451</span>
+			<span class="city"></span>
+			<span class="temp"></span><span class="symbol"></span>
 		</div>
 		<div class="input">
-			<input type="text" name="city" placeholder="Enter another city:">
-			<button type="button" name="search">Search</button>
+			<input id="input" type="text" name="city" placeholder="Enter another city:">
+			<button id="search" type="button" name="search">Search</button>
+		</div>
+		<div class="temp-units">
+			<button id="metric" class="active" type="button" name="button">Metric</button>
+			<button id="imperial" class="" type="button" name="button">Imperial</button>
 		</div>
 		<div class="footer">
 			<p>&copy 2016 Lessar277 \\ Animated Weather Icons made by <a href="https://codepen.io/joshbader/pen/EjXgqr">Josh Bader</a> </p>
 		</div>
+		<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>
