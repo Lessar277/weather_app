@@ -53,7 +53,7 @@ function getWeather() {
     options.q = $('#input').val();
     options.units = options.units || 'metric';
     $.getJSON('http://api.openweathermap.org/data/2.5/weather', options, function(data) {
-        console.log(data.weather[0].id);
+        $('.no-geo').addClass('hidden')
         $('.city').html(data.name);
         $('.temp').html(Math.round(data.main.temp));
         tempSymbol(options.units)
@@ -76,10 +76,14 @@ $('#input').keypress(function(e) {
 
 $(document).ready(function() {
     if(navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-                options.lat = position.coords.latitude;
-                options.lon = position.coords.longitude;
-                getWeather();
-        })
+		getWeatherByPos =  function(position) {
+			options.lat = position.coords.latitude;
+			options.lon = position.coords.longitude;
+			getWeather();
+		}
+		positionError = function(error) {
+			$('.no-geo').removeClass('hidden');
+		}
+        navigator.geolocation.getCurrentPosition(getWeatherByPos, positionError)
     }
 });

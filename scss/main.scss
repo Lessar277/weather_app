@@ -9,6 +9,15 @@ body {
 	flex-direction: column;
 	align-items: center;
 	height: 100vh;
+	.no-geo {
+		text-align: center;
+		color: #fff;
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	.hidden {
+		display: none;
+	}
 	.weather-icon {
 		max-height: 300px;
 	}
