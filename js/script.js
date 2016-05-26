@@ -56,7 +56,8 @@ function getWeather() {
         $('.no-geo').addClass('hidden')
         $('.city').html(data.name);
         $('.temp').html(Math.round(data.main.temp));
-        tempSymbol(options.units)
+        tempSymbol(options.units);
+        $('#input').val("");
         if(data.weather[0].id === 800) {
             loadSrc('sun.html')
         } else {

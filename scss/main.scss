@@ -9,11 +9,30 @@ body {
 	flex-direction: column;
 	align-items: center;
 	height: 100vh;
+	button {
+		cursor: pointer;
+		background: #0099cc;
+		padding: 6px 10px;
+		border-style: none;
+		font-weight: bold;
+		color: #d9d9d9;
+		outline-style: none;
+		&.active {
+			background: #00394d;
+			color:  #fff;
+		}
+		&#metric  {
+			margin-right: -2px;
+		}
+		&#imperial {
+			margin-left: -2px;
+		}
+	}
 	.no-geo {
 		text-align: center;
 		color: #fff;
-		margin-top: 100px;
-		margin-bottom: 100px;
+		margin-top: 50px;
+		margin-bottom: 60px;
 	}
 	.hidden {
 		display: none;
@@ -22,6 +41,7 @@ body {
 		max-height: 300px;
 	}
 	.weather-text {
+		font-size: 1.5em;
 		color: white;
 		font-weight: bold;
 	}
@@ -30,5 +50,21 @@ body {
 		font-size: 0.6em;
 		margin-top: auto;
 		max-width: 100%;
+	}
+	.input {
+		margin: 20px 0;
+		#input {
+			padding: 6px;
+			border-style: none;
+			outline-color: #33cc33;
+		}
+		#search {
+			background-color: #33cc33;
+			margin-left: -4px;
+			&:active {
+				background: #196619;
+				color: #a6a6a6;
+			}
+		}
 	}
 }
