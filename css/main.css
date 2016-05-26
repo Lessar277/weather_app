@@ -617,9 +617,11 @@ body {
       background: #00394d;
       color: #fff; }
     body button#metric {
-      margin-right: -2px; }
+      margin-right: -2px;
+      border-radius: 7px 0 0 7px; }
     body button#imperial {
-      margin-left: -2px; }
+      margin-left: -2px;
+      border-radius: 0 7px 7px 0; }
   body .no-geo {
     text-align: center;
     color: #fff;
@@ -632,7 +634,9 @@ body {
   body .weather-text {
     font-size: 1.5em;
     color: white;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 25px; }
   body .footer {
     color: white;
     font-size: 0.6em;
@@ -643,12 +647,15 @@ body {
     body .input #input {
       padding: 6px;
       border-style: none;
-      outline-color: #33cc33; }
+      outline-color: #b32400;
+      border-radius: 7px 0 0 7px; }
     body .input #search {
-      background-color: #33cc33;
-      margin-left: -4px; }
+      background-color: #b32400;
+      margin-left: -4px;
+      color: #fff;
+      border-radius: 0 7px 7px 0; }
       body .input #search:active {
-        background: #196619;
+        background: #661400;
         color: #a6a6a6; }
 
 /*# sourceMappingURL=main.css.map */

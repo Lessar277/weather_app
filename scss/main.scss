@@ -23,9 +23,11 @@ body {
 		}
 		&#metric  {
 			margin-right: -2px;
+			border-radius: 7px 0 0 7px;
 		}
 		&#imperial {
 			margin-left: -2px;
+			border-radius: 0 7px 7px 0;
 		}
 	}
 	.no-geo {
@@ -44,6 +46,8 @@ body {
 		font-size: 1.5em;
 		color: white;
 		font-weight: bold;
+		margin-top: 10px;
+		margin-bottom: 25px;
 	}
 	.footer {
 		color: white;
@@ -56,13 +60,16 @@ body {
 		#input {
 			padding: 6px;
 			border-style: none;
-			outline-color: #33cc33;
+			outline-color: #b32400;
+			border-radius: 7px 0 0 7px;
 		}
 		#search {
-			background-color: #33cc33;
+			background-color: #b32400;
 			margin-left: -4px;
+			color: #fff;
+			border-radius: 0 7px 7px 0;
 			&:active {
-				background: #196619;
+				background: #661400;
 				color: #a6a6a6;
 			}
 		}
