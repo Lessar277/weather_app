@@ -2,6 +2,34 @@
 function loadSrc(src) {
     $('.weather-icon').load(src);
 }
+
+/*
+Weather IDs and their corresponding icons:
+2xx - thunderstorm;
+3xx - sun-shower
+5xx - rainy
+6xx - flurries
+800 - sunny
+80x - cloudy
+*/
+
+function loadWeatherIcon(id) {
+    idString = id.toString();
+    if (idString[0]  == 2) {
+        loadSrc('icons/thunder-storm.html')
+    } else if (idString[0] == 3) {
+        loadSrc('icons/sun-shower.html')
+    } else if (idString[0] == 5) {
+        loadSrc('icons/rainy.html')
+    } else if (idString[0] == 6) {
+        loadSrc('icons/flurries.html')
+    } else if (id === 800) {
+        loadSrc('icons/sunny.html')
+    } else {
+        loadSrc('icons/cloudy.html')
+    }
+}
+
 //options for the API call, it will get populated with units and city
 var options = {
     "appid": "7f6435e69b025332b6bbf79e3a160058"
@@ -57,12 +85,9 @@ function getWeather() {
         $('.city').html(data.name);
         $('.temp').html(Math.round(data.main.temp));
         tempSymbol(options.units);
+        $('.description').html(data.weather[0].description)
         $('#input').val("");
-        if(data.weather[0].id === 800) {
-            loadSrc('sun.html')
-        } else {
-            loadSrc('thunder-storm.html')
-        }
+        loadWeatherIcon(data.weather[0].id);
     })
 }
 

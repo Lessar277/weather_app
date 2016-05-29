@@ -632,13 +632,15 @@ body {
   body .weather-icon {
     max-height: 300px; }
   body .weather-text {
+    text-transform: capitalize;
+    text-align: center;
     font-size: 1.5em;
-    color: white;
+    color: #fff;
     font-weight: bold;
     margin-top: 10px;
     margin-bottom: 25px; }
   body .footer {
-    color: white;
+    color: #fff;
     font-size: 0.6em;
     margin-top: auto;
     max-width: 100%; }
@@ -657,5 +659,7 @@ body {
       body .input #search:active {
         background: #661400;
         color: #a6a6a6; }
+  body .footer a, body .footer a:visited {
+    color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
